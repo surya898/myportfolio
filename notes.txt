@@ -1,0 +1,59 @@
+10px is the padding for the top and bottom of the link.
+20px is the padding for the left and right of the link.
+|----20px---- [ Home ] ----20px----|
+               ^10px
+               | Home |
+               v10px
+/* #header{
+  padding: 20px;
+  /* display: flex; */
+  /* justify-content: space-between; */ */
+/* } */
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Playwrite GB S", cursive;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.logo {
+    height: 80px; /* Increased the logo size */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Separates the logo and the links */
+    align-items: center; /* Vertically aligns both the logo and the links */
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center; /* Ensures the logo is vertically aligned */
+}
+
+.links-section {
+    display: flex;
+    justify-content: flex-end; /* Keeps the links on the right side */
+    align-items: center; /* Ensures the links are vertically aligned */
+}
+
+.links-section a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.links-section a:hover {
+    background-color: #ddd;
+    color: #000;
+}
