@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -234,7 +234,6 @@ body {
     border-radius: 8px;
     width: 220px;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill-category h3 {
@@ -387,11 +386,218 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
-    }
-}
 html {
     scroll-behavior: smooth;
+} */
+
+
+
+/* Global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite GB S", cursive;
+}
+
+body {
+    overflow-x: hidden;
+    color: #ededed;
+    background-color: #f5de7a; 
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #e08600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 1%; 
+    z-index: 100;
+}
+
+.logo {
+    height: 80px;
+}
+
+.links-section a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    transition: color 0.3s;
+}
+
+.links-section a:hover {
+    color: black;
+}
+
+/* Full-width sections */
+section {
+    width: 100%;
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+/* Home Section */
+.home {
+    background-color: #f5de7a;
+    min-height: 100vh;
+}
+
+.home h3, .home h1, .home p {
+    color: black;
+}
+
+.home-spi a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+.home-spi a:hover{
+    background: white;
+    color: #081b29;
+    box-shadow: 0 2 20px #0ef;
+}
+
+/* About Section */
+.about h2 {
+    font-size: 60px;
+}
+
+/* Services Section */
+.Services {
+    color: black;
+}
+
+.Services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.Services-box {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.Services-box:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Skills Section */
+.skill-category {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    border: 2px solid #333; 
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.skill-category p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0; 
+}
+
+/* Contact Section */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form form .send {
+    font-size: 18px;
+    background-color: green; 
+    color: white; 
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.contact-form form .send:hover {
+    background-color: darkgreen; 
+}
+
+/* Latest Projects */
+.project-box {
+    background-color: #f8f9fa; 
+    border: 2px solid #333; 
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+}
+
+.project-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.project-box p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .links-section {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        padding: 10% 5%;
+    }
+
+    .Services-container, .skills-container, .projects-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
 }
